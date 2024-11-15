@@ -24,12 +24,12 @@ class Discriminator(nn.Module):
         and an output layer with a sigmoid function.
     """
 
-    def __init__(self, in_features):
+    def __init__(self, img_dim):
         super().__init__()
 
         # Define the discriminator model architecture
         self.disc = nn.Sequential(
-            nn.Linear(in_features, 128),    # First fully connected layer
+            nn.Linear(img_dim, 128),    # First fully connected layer
             nn.LeakyReLU(0.1),                          # Leaky ReLU activation function
             nn.Linear(128, 1),    # Second fully connected layer (output layer)
             nn.Sigmoid()                                # Sigmoid activation for binary classification
