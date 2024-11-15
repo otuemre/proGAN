@@ -81,3 +81,9 @@ $RECYCLE.BIN/
 
 # Visual Studio Code
 .vscode/
+
+# Exclude TensorBoard logs
+runs/
+
+# Exclude dataset directory
+dataset/
